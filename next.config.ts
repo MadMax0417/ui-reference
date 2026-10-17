@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // cacheComponents/partialPrefetching disabled: this is a static showcase app,
+  // and Next 16's instant-UI validation logs noisy console errors without it.
+  cacheComponents: false,
   turbopack: {
     rules: {
       "*.css": {
