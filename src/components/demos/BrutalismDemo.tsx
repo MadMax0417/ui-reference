@@ -29,11 +29,11 @@ export default function BrutalismDemo({ copy }: { copy: Landing }) {
 
       {/* Hero */}
       <section className="grid gap-0 border-b-4 border-black lg:grid-cols-5">
-        <div className="border-b-4 border-black p-10 lg:col-span-3 lg:border-r-4 lg:border-b-0">
+        <div className="border-b-4 border-black p-6 lg:col-span-3 lg:border-r-4 lg:border-b-0 sm:p-10">
           <p className="inline-block bg-[#2EC4B6] px-3 py-1 text-xs font-black uppercase text-black">
             {copy.eyebrow}
           </p>
-          <h1 className="mt-6 text-5xl leading-[0.95] font-black tracking-tight uppercase">
+          <h1 className="mt-6 text-4xl leading-[0.95] font-black tracking-tight uppercase sm:text-5xl">
             {copy.heroTitle}
           </h1>
           <p className="mt-6 max-w-md text-sm leading-relaxed font-bold">
@@ -49,14 +49,14 @@ export default function BrutalismDemo({ copy }: { copy: Landing }) {
           </div>
         </div>
         <div className="grid place-items-center bg-[#FF6B6B] p-10 lg:col-span-2">
-          <div className={`grid place-items-center bg-[#2EC4B6] p-10 text-7xl ${BORDER} ${SHADOW} -rotate-3`}>
+          <div className={`grid place-items-center bg-[#2EC4B6] p-6 text-5xl sm:p-10 sm:text-7xl ${BORDER} ${SHADOW} -rotate-3`}>
             ✱
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="border-b-4 border-black p-10">
+      <section className="border-b-4 border-black p-6 sm:p-10">
         <h2 className="text-3xl font-black uppercase">{copy.featuresHeading}</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {copy.featureCards.map((f, i) => (
@@ -83,7 +83,7 @@ export default function BrutalismDemo({ copy }: { copy: Landing }) {
       </section>
 
       {/* Pricing */}
-      <section className="border-b-4 border-black p-10">
+      <section className="border-b-4 border-black p-6 sm:p-10">
         <h2 className="text-3xl font-black uppercase">{copy.pricingHeading}</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {copy.plans.map((p) => (

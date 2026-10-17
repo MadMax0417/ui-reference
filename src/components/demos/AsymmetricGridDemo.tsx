@@ -5,17 +5,17 @@ const ACCENT = "#F14E6D";
 
 export default function AsymmetricGridDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full bg-white p-8 font-sans text-[#171717]">
+    <div className="min-h-full bg-white p-4 font-sans text-[#171717] sm:p-8">
       <div className="mx-auto max-w-6xl">
         {/* Nav on the 12-col grid */}
-        <nav className="grid grid-cols-12 items-center gap-6 border-b border-[#171717]/15 py-5">
-          <span className="col-span-4 text-sm font-bold tracking-tight">Lumio<sup className="text-[#F14E6D]">†</sup></span>
-          <div className="col-span-5 flex justify-center gap-8 text-xs text-[#6B6B6B]">
+        <nav className="grid grid-cols-1 items-center gap-3 border-b border-[#171717]/15 py-5 sm:grid-cols-12 sm:gap-6">
+          <span className="text-sm font-bold tracking-tight sm:col-span-4">Lumio<sup className="text-[#F14E6D]">†</sup></span>
+          <div className="flex flex-wrap justify-center gap-4 text-xs text-[#6B6B6B] sm:col-span-5 sm:gap-8">
             {copy.navLinks.map((l) => (
               <span key={l}>{l}</span>
             ))}
           </div>
-          <span className="col-span-3 justify-self-end bg-[#171717] px-5 py-2 text-xs font-semibold text-white">
+          <span className="justify-self-center bg-[#171717] px-5 py-2 text-xs font-semibold text-white sm:col-span-3 sm:justify-self-end">
             {copy.ctaPrimary}
           </span>
         </nav>
@@ -24,7 +24,7 @@ export default function AsymmetricGridDemo({ copy }: { copy: Landing }) {
         <section className="relative grid grid-cols-12 gap-6 py-20">
           <span
             aria-hidden
-            className="pointer-events-none absolute -top-8 right-0 select-none text-[11rem] font-black leading-none text-transparent"
+            className="pointer-events-none absolute -top-8 right-0 hidden select-none text-[11rem] font-black leading-none text-transparent sm:block"
             style={{ WebkitTextStroke: `1.5px rgba(241, 78, 109, 0.35)` }}
           >
             01
@@ -33,7 +33,7 @@ export default function AsymmetricGridDemo({ copy }: { copy: Landing }) {
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-[#F14E6D]">
               {copy.eyebrow} / Vol.01
             </p>
-            <h1 className="mt-5 text-6xl leading-[1.0] font-bold tracking-tight">
+            <h1 className="mt-5 text-4xl leading-[1.05] font-bold tracking-tight sm:text-6xl sm:leading-[1.0]">
               Turn messy ideas into finished designs
             </h1>
           </div>
@@ -64,7 +64,7 @@ export default function AsymmetricGridDemo({ copy }: { copy: Landing }) {
             <h3 className="mt-6 text-xl font-bold">{copy.featureCards[2].title}</h3>
             <p className="mt-3 text-xs leading-relaxed text-[#5B5B5B]">{copy.featureCards[2].desc}</p>
           </article>
-          <div className="col-span-5 col-start-9 mt-10 flex items-end">
+          <div className="col-span-12 mt-10 flex items-end lg:col-span-5 lg:col-start-9">
             <span className="text-5xl font-black text-[#F14E6D]">1.2M</span>
             <span className="ml-3 text-xs leading-snug text-[#6B6B6B]">
               internal canvases
@@ -122,14 +122,14 @@ export default function AsymmetricGridDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Footer */}
-        <footer className="flex items-end justify-between border-t border-[#171717]/15 pt-6 pb-3 text-xs text-[#6B6B6B]">
+        <footer className="flex flex-wrap items-end justify-between gap-x-6 gap-y-2 border-t border-[#171717]/15 pt-6 pb-3 text-xs text-[#6B6B6B]">
           <span>{copy.copyright}</span>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-4 sm:gap-6">
             {copy.footerLinks.map((l) => (
               <span key={l}>{l}</span>
             ))}
           </div>
-          <span aria-hidden className="text-[10rem] font-black leading-none text-transparent" style={{ WebkitTextStroke: "1.5px rgba(23,23,23,0.12)" }}>
+          <span aria-hidden className="hidden text-[10rem] font-black leading-none text-transparent sm:block" style={{ WebkitTextStroke: "1.5px rgba(23,23,23,0.12)" }}>
             37
           </span>
         </footer>

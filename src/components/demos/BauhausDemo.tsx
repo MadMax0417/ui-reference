@@ -8,7 +8,7 @@ const INK = "#1B1B1B";
 
 export default function BauhausDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full bg-[#F7F5F0] p-8 font-sans" style={{ color: INK }}>
+    <div className="min-h-full bg-[#F7F5F0] p-4 font-sans sm:p-8" style={{ color: INK }}>
       <div className="mx-auto max-w-5xl">
         {/* Nav: thick black rule */}
         <nav className="flex items-center justify-between py-5">
@@ -17,7 +17,7 @@ export default function BauhausDemo({ copy }: { copy: Landing }) {
           </span>
           <div className="flex items-center gap-7 text-xs font-bold lowercase tracking-wide">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l}</span>
+              <span key={l} className="hidden sm:inline">{l}</span>
             ))}
             <span className="px-5 py-2 text-xs font-bold lowercase text-white" style={{ background: BLUE }}>
               {copy.ctaPrimary}
@@ -32,13 +32,13 @@ export default function BauhausDemo({ copy }: { copy: Landing }) {
             <p className="text-[11px] font-bold tracking-[0.35em] uppercase" style={{ color: RED }}>
               {copy.eyebrow}
             </p>
-            <h1 className="mt-4 text-6xl leading-[0.98] font-bold lowercase tracking-tight">
+            <h1 className="mt-4 text-4xl leading-[0.98] font-bold lowercase tracking-tight sm:text-6xl">
               {copy.heroTitle}
             </h1>
             <p className="mt-6 max-w-md text-sm leading-relaxed font-medium text-[#3E3C38]">
               {copy.heroSubtitle}
             </p>
-            <div className="mt-9 flex gap-4">
+            <div className="mt-9 flex flex-wrap gap-4">
               <span className="flex items-center gap-2 px-8 py-3.5 text-xs font-bold lowercase text-white" style={{ background: INK }}>
                 {copy.ctaPrimary} <span className="inline-block size-2.5 rounded-full" style={{ background: YELLOW }} />
               </span>

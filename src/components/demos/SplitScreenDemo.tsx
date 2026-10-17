@@ -8,12 +8,12 @@ export default function SplitScreenDemo({ copy }: { copy: Landing }) {
   return (
     <div className="min-h-full font-sans" style={{ color: DARK }}>
       {/* Nav — split in two */}
-      <nav className="grid grid-cols-2 items-center" style={{ minHeight: "4.5rem" }}>
-        <div className="flex items-center justify-between px-8 text-white h-full" style={{ background: DARK }}>
+      <nav className="grid grid-cols-1 items-center sm:grid-cols-2">
+        <div className="flex items-center justify-between px-5 text-white h-full sm:px-8" style={{ background: DARK }}>
           <span className="text-sm font-bold tracking-tight">{copy.product}</span>
           <span className="text-xs text-white/60">{copy.ctaSecondary} ↗</span>
         </div>
-        <div className="flex h-full items-center justify-end gap-7 px-8 text-xs font-medium text-[#52565E]" style={{ background: LIGHT, borderLeft: "1px solid rgba(0,0,0,0.12)" }}>
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-black/10 px-5 py-3 text-xs font-medium text-[#52565E] sm:h-full sm:justify-end sm:border-t-0 sm:border-l sm:gap-7 sm:py-0 sm:pl-8" style={{ background: LIGHT }}>
           {copy.navLinks.map((l) => (
             <span key={l}>{l}</span>
           ))}
@@ -25,17 +25,17 @@ export default function SplitScreenDemo({ copy }: { copy: Landing }) {
 
       {/* Hero — statement/proof */}
       <section className="grid md:grid-cols-2" style={{ minHeight: "30rem" }}>
-        <div className="flex flex-col justify-center px-12 py-16 text-white" style={{ background: DARK }}>
+        <div className="flex flex-col justify-center px-5 py-14 text-white sm:px-12 sm:py-16" style={{ background: DARK }}>
           <p className="text-[11px] font-semibold tracking-[0.35em] uppercase text-white/50">
             {copy.eyebrow}
           </p>
-          <h1 className="mt-6 text-5xl leading-[1.05] font-semibold tracking-tight">
+          <h1 className="mt-6 text-4xl leading-[1.05] font-semibold tracking-tight sm:text-5xl">
             {copy.heroTitle}
           </h1>
         </div>
-        <div className="flex flex-col justify-center px-12 py-16" style={{ background: LIGHT, borderLeft: "1px solid rgba(0,0,0,0.12)" }}>
+        <div className="flex flex-col justify-center border-t border-black/10 px-5 py-14 sm:border-t-0 sm:border-l sm:px-12 sm:py-16" style={{ background: LIGHT }}>
           <p className="max-w-md text-base leading-relaxed text-[#52565E]">{copy.heroSubtitle}</p>
-          <div className="mt-9 flex gap-4">
+          <div className="mt-9 flex flex-wrap gap-4">
             <span className="bg-[#14161A] px-7 py-3.5 text-xs font-semibold text-white">
               {copy.ctaPrimary} →
             </span>
@@ -58,13 +58,13 @@ export default function SplitScreenDemo({ copy }: { copy: Landing }) {
 
       {/* Testimonial — quote/critic split */}
       <section className="grid md:grid-cols-2">
-        <div className="flex flex-col justify-center gap-6 px-12 py-16 text-white" style={{ background: DARK, borderTop: "1px solid rgba(255,255,255,0.12)" }}>
+        <div className="flex flex-col justify-center gap-6 border-t border-white/10 px-5 py-14 text-white sm:px-12 sm:py-16" style={{ background: DARK }}>
           <p className="text-[11px] font-semibold tracking-[0.35em] uppercase text-white/50">
             Field notes
           </p>
           <p className="text-3xl leading-snug font-light">“{copy.testimonial.quote}”</p>
         </div>
-        <div className="flex flex-col justify-center px-12 py-16" style={{ background: LIGHT, borderLeft: "1px solid rgba(0,0,0,0.12)" }}>
+        <div className="flex flex-col justify-center border-t border-black/10 px-5 py-14 sm:border-t-0 sm:border-l sm:px-12 sm:py-16" style={{ background: LIGHT }}>
           <div className="flex items-center gap-4">
             <span className="grid size-14 place-items-center bg-[#14161A] text-lg font-bold text-white">
               MC
@@ -84,7 +84,7 @@ export default function SplitScreenDemo({ copy }: { copy: Landing }) {
 
       {/* Pricing — choose/the plans */}
       <section className="grid md:grid-cols-2">
-        <div className="flex flex-col justify-center px-12 py-16 text-white" style={{ background: DARK }}>
+        <div className="flex flex-col justify-center px-5 py-14 text-white sm:px-12 sm:py-16" style={{ background: DARK }}>
           <p className="text-[11px] font-semibold tracking-[0.35em] uppercase text-white/50">
             {copy.pricingHeading}
           </p>
@@ -93,7 +93,7 @@ export default function SplitScreenDemo({ copy }: { copy: Landing }) {
           </p>
           <p className="mt-8 text-xs text-white/50">{copy.pricingNote}</p>
         </div>
-        <div className="px-10 py-14" style={{ background: LIGHT, borderLeft: "1px solid rgba(0,0,0,0.12)" }}>
+        <div className="border-t border-black/10 px-5 py-14 sm:border-t-0 sm:border-l sm:px-10 sm:py-14" style={{ background: LIGHT }}>
           <div className="space-y-6">
             {copy.plans.map((p) => (
               <div
@@ -124,11 +124,11 @@ export default function SplitScreenDemo({ copy }: { copy: Landing }) {
       </section>
 
       {/* Footer split */}
-      <footer className="grid grid-cols-2 text-xs" style={{ minHeight: "4rem" }}>
-        <div className="flex items-center px-8 text-white/70" style={{ background: DARK }}>
+      <footer className="grid grid-cols-1 text-xs sm:grid-cols-2">
+        <div className="flex items-center px-5 py-3 text-white/70 sm:py-0" style={{ background: DARK }}>
           {copy.copyright}
         </div>
-        <div className="flex items-center justify-end gap-8 px-8 font-medium text-[#52565E]" style={{ background: LIGHT, borderLeft: "1px solid rgba(0,0,0,0.12)" }}>
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 border-t border-black/10 px-5 py-3 font-medium text-[#52565E] sm:border-t-0 sm:border-l sm:justify-end sm:gap-8 sm:py-0" style={{ background: LIGHT }}>
           {copy.footerLinks.map((l) => (
             <span key={l}>{l}</span>
           ))}

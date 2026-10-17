@@ -8,9 +8,9 @@ export default function CorporateDemo({ copy }: { copy: Landing }) {
   return (
     <div className="min-h-full bg-[#F5F7FA] font-sans text-[#212934]">
       {/* Top utility bar */}
-      <div className="flex items-center justify-between bg-[#0B2E47] px-6 py-1.5 text-[11px] text-white/70">
+      <div className="flex items-center justify-between bg-[#0B2E47] px-4 py-1.5 text-[11px] text-white/70 sm:px-6">
         <span>For teams of 10 → 10,000</span>
-        <div className="flex gap-5">
+        <div className="hidden gap-5 sm:flex">
           <span>Status: <span className="text-emerald-300">● Operational</span></span>
           <span>Docs</span>
           <span>Support: +1 800 DESIGN</span>
@@ -18,26 +18,26 @@ export default function CorporateDemo({ copy }: { copy: Landing }) {
       </div>
 
       {/* Nav */}
-      <nav className="flex items-center justify-between bg-white px-6 py-3.5 shadow-sm">
+      <nav className="flex items-center justify-between bg-white px-4 py-3.5 shadow-sm sm:px-6">
         <div className="flex items-center gap-3">
           <span className="grid size-8 place-items-center rounded bg-[#1D6FB8] text-sm font-bold text-white">L</span>
           <span className="text-sm font-bold">{copy.product} <span className="font-normal text-[#6B7480]">Enterprise</span></span>
         </div>
-        <div className="flex items-center gap-7 text-xs font-medium text-[#4A5563]">
+        <div className="hidden items-center gap-7 text-xs font-medium text-[#4A5563] md:flex">
           {copy.navLinks.map((l) => (
             <span key={l}>{l}</span>
           ))}
           <span>Solutions</span>
         </div>
         <div className="flex items-center gap-3 text-xs font-semibold">
-          <span className="text-[#0F3C5C]">Sign in</span>
-          <span className="rounded-md border border-[#0F3C5C]/30 px-4 py-2 text-[#0F3C5C]">Book demo</span>
+          <span className="hidden text-[#0F3C5C] sm:inline">Sign in</span>
+          <span className="hidden rounded-md border border-[#0F3C5C]/30 px-4 py-2 text-[#0F3C5C] sm:inline">Book demo</span>
           <span className="rounded-md bg-[#0F3C5C] px-4 py-2 text-white">Start free</span>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="grid items-center gap-12 px-10 py-16 lg:grid-cols-2">
+      <section className="grid items-center gap-12 px-5 py-12 sm:px-10 sm:py-16 lg:grid-cols-2">
         <div>
           <p className="text-[11px] font-bold uppercase tracking-widest" style={{ color: BLUE }}>
             {copy.eyebrow} · Enterprise-ready
@@ -104,7 +104,7 @@ export default function CorporateDemo({ copy }: { copy: Landing }) {
       </section>
 
       {/* Logo strip */}
-      <section className="border-y border-[#E1E7EE] bg-white px-10 py-6">
+      <section className="border-y border-[#E1E7EE] bg-white px-5 py-6 sm:px-10">
         <p className="text-center text-[10px] font-semibold uppercase tracking-widest text-[#8A93A0]">
           Trusted by 4,000+ teams worldwide
         </p>
@@ -118,7 +118,7 @@ export default function CorporateDemo({ copy }: { copy: Landing }) {
       </section>
 
       {/* Features */}
-      <section className="px-10 py-14">
+      <section className="px-5 py-12 sm:px-10 sm:py-14">
         <h2 className="text-center text-2xl font-bold" style={{ color: NAVY }}>{copy.featuresHeading}</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {copy.featureCards.map((f) => (
@@ -137,7 +137,7 @@ export default function CorporateDemo({ copy }: { copy: Landing }) {
       </section>
 
       {/* Testimonial */}
-      <section className="px-10 py-10">
+      <section className="px-5 py-10 sm:px-10">
         <div className="grid items-center gap-6 rounded-lg border border-[#E1E7EE] bg-white p-9 sm:grid-cols-[auto_1fr]">
           <span className="grid size-16 place-items-center rounded-full text-lg font-bold text-white" style={{ background: NAVY }}>
             MC
@@ -152,7 +152,7 @@ export default function CorporateDemo({ copy }: { copy: Landing }) {
       </section>
 
       {/* Pricing */}
-      <section className="px-10 pb-16">
+      <section className="px-5 pb-16 sm:px-10">
         <h2 className="text-center text-2xl font-bold" style={{ color: NAVY }}>{copy.pricingHeading}</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {copy.plans.map((p) => (
@@ -179,7 +179,7 @@ export default function CorporateDemo({ copy }: { copy: Landing }) {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-[#E1E7EE] bg-white px-10 py-10" style={{ borderTopWidth: 4, borderColor: NAVY }}>
+      <footer className="border-t border-[#E1E7EE] bg-white px-5 py-10 sm:px-10" style={{ borderTopWidth: 4, borderColor: NAVY }}>
         <div className="grid gap-8 sm:grid-cols-4">
           <div>
             <p className="text-sm font-bold" style={{ color: NAVY }}>{copy.product}</p>

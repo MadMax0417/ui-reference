@@ -10,7 +10,7 @@ export default function CinematicDemo({ copy }: { copy: Landing }) {
           <span className="text-sm font-light tracking-[0.45em] uppercase">{copy.product}</span>
           <div className="flex items-center gap-8 text-[10px] font-light tracking-[0.3em] uppercase text-white/60">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l}</span>
+              <span key={l} className="hidden sm:inline">{l}</span>
             ))}
             <span className="text-white">{copy.ctaPrimary} ⟶</span>
           </div>
@@ -89,7 +89,7 @@ export default function CinematicDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Testimonial — soft interview light */}
-        <section className="relative overflow-hidden border border-white/10 bg-[#0B0B0B] px-10 py-16 text-center">
+        <section className="relative overflow-hidden border border-white/10 bg-[#0B0B0B] px-5 py-16 text-center sm:px-10">
           <div aria-hidden className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(245,196,142,0.14), transparent 55%)" }} />
           <blockquote className="relative mx-auto max-w-2xl text-2xl leading-relaxed font-extralight">
             “{copy.testimonial.quote}”

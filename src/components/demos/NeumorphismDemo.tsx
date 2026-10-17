@@ -9,7 +9,7 @@ const SOFT = "4px 4px 8px #c3cad6, -4px -4px 8px #ffffff";
 
 export default function NeumorphismDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full p-8 font-sans" style={{ background: BG, color: "#4A5568" }}>
+    <div className="min-h-full p-4 font-sans sm:p-8" style={{ background: BG, color: "#4A5568" }}>
       <div className="mx-auto max-w-4xl space-y-10">
         {/* Nav */}
         <nav
@@ -21,7 +21,7 @@ export default function NeumorphismDemo({ copy }: { copy: Landing }) {
             {copy.navLinks.map((l) => (
               <span
                 key={l}
-                className="rounded-full px-4 py-2 transition-shadow"
+                className="hidden rounded-full px-4 py-2 transition-shadow sm:inline-block"
                 style={{ background: SURFACE, boxShadow: RAISED }}
               >
                 {l}
@@ -38,7 +38,7 @@ export default function NeumorphismDemo({ copy }: { copy: Landing }) {
 
         {/* Hero */}
         <section
-          className="rounded-[2rem] px-12 py-16 text-center"
+          className="rounded-[2rem] px-5 py-12 text-center sm:px-10 sm:py-16"
           style={{ background: SURFACE, boxShadow: RAISED }}
         >
           <span
@@ -56,7 +56,7 @@ export default function NeumorphismDemo({ copy }: { copy: Landing }) {
           <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-[#93A3C1]">
             {copy.heroSubtitle}
           </p>
-          <div className="mt-9 flex justify-center gap-5">
+          <div className="mt-9 flex flex-wrap justify-center gap-5">
             <span
               className="rounded-full px-7 py-3 text-xs font-bold text-[#5B9CFF]"
               style={{ background: SURFACE, boxShadow: PRESSED }}
@@ -96,7 +96,7 @@ export default function NeumorphismDemo({ copy }: { copy: Landing }) {
 
         {/* Testimonial */}
         <section
-          className="rounded-[2rem] px-12 py-12 text-center"
+          className="rounded-[2rem] px-5 py-12 text-center sm:px-12"
           style={{ background: SURFACE, boxShadow: SOFT }}
         >
           <p className="text-xl leading-relaxed font-medium text-[#5B6B8C] italic">
@@ -141,7 +141,7 @@ export default function NeumorphismDemo({ copy }: { copy: Landing }) {
 
         {/* Footer */}
         <footer
-          className="flex items-center justify-between rounded-2xl px-8 py-5 text-xs text-[#93A3C1]"
+          className="flex flex-wrap items-center justify-between gap-x-5 gap-y-1 rounded-2xl px-5 py-5 text-xs text-[#93A3C1] sm:px-8"
           style={{ background: SURFACE, boxShadow: SOFT }}
         >
           <span>{copy.copyright}</span>

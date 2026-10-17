@@ -54,7 +54,7 @@ export default function AuroraDemo({ copy }: { copy: Landing }) {
           <p className="text-[11px] font-semibold tracking-[0.4em] uppercase text-emerald-300/80">
             {copy.eyebrow}
           </p>
-          <h1 className="mx-auto mt-5 max-w-2xl text-5xl leading-[1.08] font-semibold text-white">
+          <h1 className="mx-auto mt-5 max-w-2xl text-4xl leading-[1.08] font-semibold text-white sm:text-5xl">
             Turn messy ideas into{" "}
             <span
               className=""
@@ -71,7 +71,7 @@ export default function AuroraDemo({ copy }: { copy: Landing }) {
           <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-slate-400">
             {copy.heroSubtitle}
           </p>
-          <div className="mt-9 flex justify-center gap-4">
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
             <span className="rounded-xl border border-emerald-300/50 bg-emerald-300/15 px-7 py-3 text-xs font-semibold text-emerald-100 backdrop-blur transition-colors hover:bg-emerald-300/25">
               {copy.ctaPrimary}
             </span>
@@ -103,7 +103,7 @@ export default function AuroraDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Testimonial */}
-        <section className="rounded-2xl border border-white/10 bg-white/[0.06] px-10 py-12 text-center backdrop-blur-xl">
+        <section className="rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-12 text-center backdrop-blur-xl sm:px-10">
           <p className="mx-auto max-w-2xl text-xl leading-relaxed font-medium text-slate-100">
             <span className="text-emerald-300">“</span>
             {copy.testimonial.quote}
@@ -155,7 +155,7 @@ export default function AuroraDemo({ copy }: { copy: Landing }) {
         <p className="text-center text-[11px] text-slate-500">{copy.pricingNote}</p>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between border-t border-white/10 px-2 pt-5 pb-3 text-[11px] text-slate-500">
+        <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-1 border-t border-white/10 px-2 pt-5 pb-3 text-[11px] text-slate-500">
           <span>{copy.copyright}</span>
           <div className="flex gap-5 text-slate-400">
             {copy.footerLinks.map((l) => (

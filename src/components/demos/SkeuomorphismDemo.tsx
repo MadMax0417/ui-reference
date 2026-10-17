@@ -35,7 +35,7 @@ export default function SkeuomorphismDemo({ copy }: { copy: Landing }) {
           </div>
           <div className="flex items-center gap-4 text-xs font-semibold text-[#55565C]">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l}</span>
+              <span key={l} className="hidden sm:inline">{l}</span>
             ))}
             <span
               className="rounded-md px-4 py-1.5 text-xs font-bold text-white"
@@ -53,7 +53,7 @@ export default function SkeuomorphismDemo({ copy }: { copy: Landing }) {
 
         {/* Hero plate */}
         <section
-          className="rounded-2xl px-10 py-16 text-center"
+          className="rounded-2xl px-5 py-12 text-center sm:px-10 sm:py-16"
           style={{
             background:
               "linear-gradient(180deg, #FBFBFD 0%, #EDEFF4 60%, #DDE1EA 100%)",
@@ -86,7 +86,7 @@ export default function SkeuomorphismDemo({ copy }: { copy: Landing }) {
           <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-[#7A7D85]">
             {copy.heroSubtitle}
           </p>
-          <div className="mt-9 flex justify-center gap-4">
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
             <span
               className="rounded-full px-8 py-3.5 text-sm font-bold text-white"
               style={{
@@ -158,7 +158,7 @@ export default function SkeuomorphismDemo({ copy }: { copy: Landing }) {
 
         {/* Testimonial — leather plate */}
         <section
-          className="rounded-2xl px-10 py-12 text-center"
+          className="rounded-2xl px-5 py-12 text-center sm:px-10"
           style={{
             background: "linear-gradient(180deg, #4E3B30 0%, #3A2C24 100%)",
             border: "1px solid #2A1F19",

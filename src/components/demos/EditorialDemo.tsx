@@ -3,14 +3,14 @@ type Landing = typeof landing;
 
 export default function EditorialDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full bg-[#FBF7EF] p-8 font-serif text-[#211E19]">
+    <div className="min-h-full bg-[#FBF7EF] p-4 font-serif text-[#211E19] sm:p-8">
       <div className="mx-auto max-w-4xl">
         {/* Masthead */}
         <header className="pt-6 pb-5 text-center">
           <p className="text-[10px] uppercase tracking-[0.5em] text-[#8B8377]">
             The Tools Issue · Vol. IV
           </p>
-          <h1 className="mt-2 text-6xl font-semibold tracking-[0.12em] uppercase">Lumio</h1>
+          <h1 className="mt-2 text-4xl font-semibold tracking-[0.12em] uppercase sm:text-6xl">Lumio</h1>
           <div className="mx-auto mt-4 w-full border-y-4 border-double border-[#211E19] py-1">
             <div className="flex justify-between text-[10px] uppercase tracking-[0.25em] text-[#8B8377]">
               <span>Design · Tools · Taste</span>
@@ -26,7 +26,7 @@ export default function EditorialDemo({ copy }: { copy: Landing }) {
             <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#8B8377]">
               {copy.eyebrow}
             </p>
-            <h2 className="mt-3 text-5xl leading-[1.05] font-semibold">
+            <h2 className="mt-3 text-3xl leading-[1.05] font-semibold sm:text-5xl">
               {copy.heroTitle}
             </h2>
             <p className="mt-6 text-base leading-relaxed first-letter:float-left first-letter:mr-2 first-letter:text-6xl first-letter:leading-[0.8] first-letter:font-semibold first-letter:text-[#A63A2B]">

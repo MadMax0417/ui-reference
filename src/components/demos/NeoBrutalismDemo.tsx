@@ -32,7 +32,7 @@ export default function NeoBrutalismDemo({ copy }: { copy: Landing }) {
             <span className={`inline-block -rotate-1 rounded-lg bg-[#B8F1D9] px-3 py-1 text-[11px] font-black lowercase ${B}`}>
               {copy.eyebrow}
             </span>
-            <h1 className="mt-5 text-5xl leading-[1.02] font-black lowercase tracking-tight">
+            <h1 className="mt-5 text-4xl leading-[1.02] font-black lowercase tracking-tight sm:text-5xl">
               <span className="inline-block -rotate-1 bg-[#F6D6FD] px-2">turn messy ideas</span>
               <br />
               into <span className="inline-block rotate-1 bg-[#BDE3FF] px-2">finished designs</span><span className="text-[#FF6B6B]">!</span>
@@ -115,7 +115,7 @@ export default function NeoBrutalismDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Footer */}
-        <footer className={`flex items-center justify-between rounded-full bg-white px-6 py-4 text-xs font-bold lowercase ${B} ${S}`}>
+        <footer className={`flex flex-wrap items-center justify-between gap-x-4 gap-y-2 rounded-full bg-white px-5 py-4 text-xs font-bold lowercase sm:px-6 ${B} ${S}`}>
           <span>{copy.copyright}</span>
           <div className="flex gap-4">
             {copy.footerLinks.map((l) => (

@@ -9,7 +9,7 @@ export default function FlatDesignDemo({ copy }: { copy: Landing }) {
         <span className="text-sm font-bold">{copy.product}</span>
         <div className="flex items-center gap-6 text-xs font-semibold">
           {copy.navLinks.map((l) => (
-            <a key={l} href="#" onClick={(e) => e.preventDefault()} className="hover:underline">
+            <a key={l} href="#" onClick={(e) => e.preventDefault()} className="hidden hover:underline sm:inline">
               {l}
             </a>
           ))}
@@ -23,7 +23,7 @@ export default function FlatDesignDemo({ copy }: { copy: Landing }) {
           <p className="mb-4 inline-block bg-[#FFC94D] px-3 py-1 text-[11px] font-bold text-[#2B2B2B]">
             {copy.eyebrow.toUpperCase()}
           </p>
-          <h1 className="text-5xl leading-[1.05] font-extrabold tracking-tight">
+          <h1 className="text-4xl leading-[1.05] font-extrabold tracking-tight sm:text-5xl">
             {copy.heroTitle}
           </h1>
           <p className="mt-5 max-w-md text-sm leading-relaxed font-medium text-[#5A6472]">
@@ -129,7 +129,7 @@ export default function FlatDesignDemo({ copy }: { copy: Landing }) {
       </section>
 
       {/* Footer */}
-      <footer className="flex items-center justify-between bg-[#2B2B2B] px-8 py-6 text-xs font-semibold text-white sm:px-16">
+      <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-1 bg-[#2B2B2B] px-8 py-6 text-xs font-semibold text-white sm:px-16">
         <span>{copy.copyright}</span>
         <div className="flex gap-6">
           {copy.footerLinks.map((l) => (

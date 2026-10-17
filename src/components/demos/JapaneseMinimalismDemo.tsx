@@ -24,7 +24,7 @@ function Enso() {
 
 export default function JapaneseMinimalismDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full bg-[#F5F1E8] p-8 font-sans" style={{ color: SUMI }}>
+    <div className="min-h-full bg-[#F5F1E8] p-4 font-sans sm:p-8" style={{ color: SUMI }}>
       <div className="relative mx-auto max-w-4xl">
         {/* Vertical accent on the left margin */}
         <div
@@ -36,10 +36,10 @@ export default function JapaneseMinimalismDemo({ copy }: { copy: Landing }) {
         </div>
 
         {/* Nav — nearly invisible chrome */}
-        <nav className="flex items-center justify-center gap-12 border-b py-8 text-[11px] tracking-[0.35em] uppercase" style={{ borderColor: HAIR }}>
+        <nav className="flex items-center justify-between border-b py-8 text-[11px] tracking-[0.35em] uppercase" style={{ borderColor: HAIR }}>
           <span className="text-sm font-medium tracking-[0.5em]">{copy.product} 墨</span>
           {copy.navLinks.map((l) => (
-            <span key={l} className="text-[#8B8377]">{l}</span>
+            <span key={l} className="hidden text-[#8B8377] sm:inline">{l}</span>
           ))}
           <span style={{ color: VERMILION }}>{copy.ctaPrimary}</span>
         </nav>

@@ -6,6 +6,8 @@ import { designStyles } from "@/data/designStyles";
 type Props = {
   current: string;
   onSelect: (slug: string) => void;
+  open: boolean;
+  onClose: () => void;
 };
 
 function CopyIcon() {
@@ -17,15 +19,19 @@ function CopyIcon() {
   );
 }
 
-export default function Sidebar({ current, onSelect }: Props) {
+export default function Sidebar({ current, onSelect, open, onClose }: Props) {
   const [query, setQuery] = useState("");
   const [copied, setCopied] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // ⌘K / Ctrl+K focuses the search box
+  // ⌘K / Ctrl+K focuses the search box (desktop only — sidebar is inline there)
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+      if (
+        (e.metaKey || e.ctrlKey) &&
+        e.key.toLowerCase() === "k" &&
+        window.matchMedia("(min-width: 1024px)").matches
+      ) {
         e.preventDefault();
         inputRef.current?.focus();
       }
@@ -54,8 +60,8 @@ export default function Sidebar({ current, onSelect }: Props) {
       .catch(() => {});
   };
 
-  return (
-    <aside className="flex h-full w-72 shrink-0 flex-col border-r border-zinc-800 bg-zinc-900/80">
+  const sidebar = (
+    <>
       <div className="px-5 pt-5 pb-3">
         <div className="flex items-center gap-2">
           <span className="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-fuchsia-500 to-cyan-400 text-sm">
@@ -171,6 +177,31 @@ export default function Sidebar({ current, onSelect }: Props) {
       <div className="border-t border-zinc-800 px-5 py-3 text-[11px] text-zinc-600">
         Same content · {designStyles.length} visual styles · ⌘K to search
       </div>
-    </aside>
+    </>
+  );
+
+  return (
+    <>
+      {/* Mobile: slide-in drawer + backdrop */}
+      <div
+        className={`fixed inset-0 z-40 bg-black/60 transition-opacity duration-300 lg:hidden ${
+          open ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        aria-hidden="true"
+        onClick={onClose}
+      />
+      <div
+        className={`fixed inset-y-0 left-0 z-50 flex w-72 max-w-[85vw] flex-col bg-zinc-900 shadow-2xl transition-transform duration-300 lg:hidden ${
+          open ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        {sidebar}
+      </div>
+
+      {/* Desktop: inline sidebar (unchanged layout) */}
+      <aside className="hidden h-full w-72 shrink-0 flex-col border-r border-zinc-800 bg-zinc-900/80 lg:flex">
+        {sidebar}
+      </aside>
+    </>
   );
 }

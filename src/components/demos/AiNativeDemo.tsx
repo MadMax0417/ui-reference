@@ -40,7 +40,7 @@ export default function AiNativeDemo({ copy }: { copy: Landing }) {
           </span>
           <div className="flex items-center gap-6 text-xs text-violet-100/60">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l}</span>
+              <span key={l} className="hidden sm:inline">{l}</span>
             ))}
             <span className="rounded-xl bg-white/10 px-4 py-1.5 text-white/90">Sign in</span>
           </div>
@@ -51,7 +51,7 @@ export default function AiNativeDemo({ copy }: { copy: Landing }) {
           <p className="text-[11px] font-semibold tracking-[0.35em] uppercase text-violet-300/80">
             {copy.eyebrow} ✦ ask-first
           </p>
-          <h1 className="mx-auto mt-5 max-w-2xl text-5xl leading-[1.08] font-semibold tracking-tight text-white">
+          <h1 className="mx-auto mt-5 max-w-2xl text-4xl leading-[1.08] font-semibold tracking-tight text-white sm:text-5xl">
             Turn messy ideas into{" "}
             <span
               className="
@@ -177,7 +177,7 @@ export default function AiNativeDemo({ copy }: { copy: Landing }) {
         <p className="text-center text-[11px] text-violet-100/40">{copy.pricingNote}</p>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between border-t border-white/10 pt-5 pb-2 text-[11px] text-violet-100/40">
+        <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-1 border-t border-white/10 pt-5 pb-2 text-[11px] text-violet-100/40">
           <span>{copy.copyright}</span>
           <div className="flex gap-5 text-violet-100/60">
             {copy.footerLinks.map((l) => (

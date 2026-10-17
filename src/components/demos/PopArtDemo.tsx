@@ -33,7 +33,7 @@ export default function PopArtDemo({ copy }: { copy: Landing }) {
           </span>
           <div className="flex items-center gap-6 text-xs font-black uppercase">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l} <span className="text-[#3B82F6]">★</span></span>
+              <span key={l} className="hidden sm:inline">{l} <span className="text-[#3B82F6]">★</span></span>
             ))}
             <span className="px-5 py-2 text-white" style={{ background: RED, border: `3px solid ${BLACK}`, boxShadow: "4px 4px 0 #111" }}>
               {copy.ctaPrimary}!
@@ -47,12 +47,12 @@ export default function PopArtDemo({ copy }: { copy: Landing }) {
             <p className="inline-block -rotate-2 border-2 px-3 py-1 text-[11px] font-black uppercase" style={{ borderColor: BLACK, background: "#FDE047" }}>
               {copy.eyebrow}!!
             </p>
-            <h1 className="mt-5 text-6xl font-black uppercase leading-[0.95] tracking-tight" style={{ textShadow: "5px 5px 0 #FDE047" }}>
+            <h1 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl" style={{ textShadow: "5px 5px 0 #FDE047" }}>
               turn messy ideas into{" "}
               <span style={{ color: BLUE, textShadow: "5px 5px 0 rgba(0,0,0,0.15)" }}>finished designs</span>!
             </h1>
             <p className="mt-5 max-w-md text-sm font-bold leading-relaxed">{copy.heroSubtitle}</p>
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
               <span className="px-8 py-4 text-xs font-black uppercase text-white" style={{ background: RED, border: `3px solid ${BLACK}`, boxShadow: "6px 6px 0 #111" }}>
                 {copy.ctaPrimary} ✸
               </span>
@@ -145,7 +145,7 @@ export default function PopArtDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between border-t-4 py-5 text-xs font-black uppercase" style={{ borderColor: BLACK }}>
+        <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-1 border-t-4 py-5 text-xs font-black uppercase" style={{ borderColor: BLACK }}>
           <span>{copy.copyright}</span>
           <div className="flex gap-5" style={{ color: RED }}>
             {copy.footerLinks.map((l) => (

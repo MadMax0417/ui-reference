@@ -3,17 +3,17 @@ type Landing = typeof landing;
 
 export default function BentoGridDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full bg-[#0B0B0F] p-5 font-sans text-white">
+    <div className="min-h-full bg-[#0B0B0F] p-3 font-sans text-white sm:p-5">
       <div className="space-y-5">
         {/* Nav */}
-        <nav className="flex items-center justify-between rounded-2xl bg-[#16161D] px-6 py-4">
+        <nav className="flex items-center justify-between rounded-2xl bg-[#16161D] px-4 py-4 sm:px-6">
           <div className="flex items-center gap-3">
             <span className="grid size-7 place-items-center rounded-lg bg-white text-xs font-black text-black">
               L
             </span>
             <span className="text-sm font-semibold">{copy.product}</span>
           </div>
-          <div className="flex items-center gap-5 text-xs text-zinc-400">
+          <div className="hidden items-center gap-5 text-xs text-zinc-400 sm:flex">
             {copy.navLinks.map((l) => (
               <span key={l} className="hover:text-white">
                 {l}
@@ -23,10 +23,13 @@ export default function BentoGridDemo({ copy }: { copy: Landing }) {
               Start free
             </span>
           </div>
+          <span className="rounded-full bg-white px-3.5 py-1.5 font-semibold text-black text-xs sm:hidden">
+            Start free
+          </span>
         </nav>
 
         {/* Hero tile */}
-        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#1C1C26] to-[#101018] px-10 py-20 text-center">
+        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#1C1C26] to-[#101018] px-6 py-14 text-center sm:px-10 sm:py-20">
           <div
             aria-hidden
             className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
@@ -34,11 +37,11 @@ export default function BentoGridDemo({ copy }: { copy: Landing }) {
           <p className="text-[11px] font-semibold tracking-[0.25em] text-zinc-500 uppercase">
             {copy.eyebrow}
           </p>
-          <h1 className="mx-auto mt-4 max-w-2xl text-5xl font-semibold tracking-tight">
+          <h1 className="mx-auto mt-4 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
             {copy.heroTitle}
           </h1>
           <p className="mx-auto mt-4 max-w-md text-sm text-zinc-400">{copy.heroSubtitle}</p>
-          <div className="mt-8 flex justify-center gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <span className="rounded-xl bg-white px-6 py-3 text-xs font-semibold text-black">
               {copy.ctaPrimary}
             </span>
@@ -49,9 +52,9 @@ export default function BentoGridDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Bento grid */}
-        <section className="grid grid-cols-3 grid-rows-[repeat(2,minmax(14rem,auto))] gap-4">
+        <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-[repeat(2,minmax(14rem,auto))]">
           {/* Big quote tile */}
-          <article className="col-span-2 flex flex-col justify-between rounded-3xl bg-[#16161D] p-8">
+          <article className="flex flex-col justify-between rounded-3xl bg-[#16161D] p-8 sm:col-span-2">
             <p className="text-xl leading-relaxed font-medium text-zinc-200">
               “{copy.testimonial.quote}”
             </p>
@@ -94,7 +97,7 @@ export default function BentoGridDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Pricing strip */}
-        <section className="grid grid-cols-3 gap-4">
+        <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {copy.plans.map((p) => (
             <div
               key={p.name}
@@ -119,9 +122,9 @@ export default function BentoGridDemo({ copy }: { copy: Landing }) {
         <p className="text-center text-[11px] text-zinc-600">{copy.pricingNote}</p>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between rounded-2xl bg-[#16161D] px-6 py-4 text-[11px] text-zinc-500">
+        <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-2 rounded-2xl bg-[#16161D] px-4 py-4 text-[11px] text-zinc-500 sm:px-6">
           <span>{copy.copyright}</span>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5">
             {copy.footerLinks.map((l) => (
               <span key={l}>{l}</span>
             ))}

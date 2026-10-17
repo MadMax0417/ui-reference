@@ -25,7 +25,7 @@ function Orbit({ size, className }: { size: number; className?: string }) {
 
 export default function RetroFuturismDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full bg-[#F4EFE2] p-8 font-sans" style={{ color: INK }}>
+    <div className="min-h-full bg-[#F4EFE2] p-4 font-sans sm:p-8" style={{ color: INK }}>
       <div className="relative mx-auto max-w-5xl">
         {/* Nav */}
         <nav
@@ -35,9 +35,9 @@ export default function RetroFuturismDemo({ copy }: { copy: Landing }) {
           <span className="text-sm font-bold tracking-[0.3em] uppercase">
             {copy.product} <span style={{ color: TEAL }}>✦</span>
           </span>
-          <div className="flex items-center gap-7 text-[11px] font-bold tracking-[0.2em] uppercase">
+          <div className="flex items-center gap-4 text-[11px] font-bold tracking-[0.2em] uppercase sm:gap-7">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l}</span>
+              <span key={l} className="hidden sm:inline">{l}</span>
             ))}
             <span
               className="rounded-full px-5 py-1.5 text-white"
@@ -54,7 +54,7 @@ export default function RetroFuturismDemo({ copy }: { copy: Landing }) {
             <p className="text-[11px] font-bold tracking-[0.4em] uppercase" style={{ color: TEAL }}>
               {copy.eyebrow} · EST. TOMORROW 1958
             </p>
-            <h1 className="mt-4 text-5xl leading-[1.05] font-bold tracking-tight uppercase">
+            <h1 className="mt-4 text-4xl leading-[1.05] font-bold tracking-tight uppercase sm:text-5xl">
               {copy.heroTitle}
             </h1>
             <p className="mt-5 max-w-md text-sm leading-relaxed font-semibold text-[#3C4A52]">

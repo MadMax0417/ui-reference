@@ -6,7 +6,7 @@ const rule = { background: "linear-gradient(90deg, transparent, #C6A15B, transpa
 
 export default function LuxuryMinimalismDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full bg-[#FAF8F4] p-8 font-serif text-[#2A2723]">
+    <div className="min-h-full bg-[#FAF8F4] p-4 font-serif text-[#2A2723] sm:p-8">
       <div className="mx-auto max-w-5xl">
         {/* Nav */}
         <nav className="flex items-center justify-between py-6">
@@ -28,7 +28,7 @@ export default function LuxuryMinimalismDemo({ copy }: { copy: Landing }) {
           <p className="text-[11px] font-medium tracking-[0.55em] uppercase" style={{ color: GOLD }}>
             {copy.eyebrow}
           </p>
-          <h1 className="mx-auto mt-7 max-w-3xl text-5xl leading-[1.15] font-light md:text-6xl">
+          <h1 className="mx-auto mt-7 max-w-3xl text-4xl leading-[1.15] font-light sm:text-5xl md:text-6xl">
             {copy.heroTitle}
           </h1>
           <p className="mx-auto mt-7 max-w-lg text-base leading-relaxed font-light text-[#6E675C]">

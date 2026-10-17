@@ -9,7 +9,7 @@ const NEAR = "shadow-[0_14px_40px_rgba(15,20,40,0.10),0_4px_12px_rgba(15,20,40,0
 export default function SpatialUiDemo({ copy }: { copy: Landing }) {
   return (
     <div
-      className="relative min-h-full p-8 font-sans text-[#1D1D24]"
+      className="relative min-h-full p-4 font-sans text-[#1D1D24] sm:p-8"
       style={{
         background:
           "radial-gradient(60rem 40rem at 50% 20%, #F2F3F6 0%, #E2E4EA 60%, #CDD0D9 100%)",
@@ -20,7 +20,7 @@ export default function SpatialUiDemo({ copy }: { copy: Landing }) {
         <nav className={`relative z-10 mx-auto flex w-fit items-center gap-5 rounded-full px-6 py-3 ${PANEL} ${DEEP}`}>
           <span className="text-sm font-semibold tracking-tight">◎ {copy.product}</span>
           {copy.navLinks.map((l) => (
-            <span key={l} className="text-xs text-[#4A4C55]">{l}</span>
+            <span key={l} className="hidden text-xs text-[#4A4C55] sm:inline">{l}</span>
           ))}
           <span className="rounded-full bg-[#1D1D24] px-4 py-1.5 text-xs font-medium text-white">
             {copy.ctaPrimary}
@@ -32,7 +32,7 @@ export default function SpatialUiDemo({ copy }: { copy: Landing }) {
           <div aria-hidden className={`absolute inset-x-10 top-10 h-72 ${PANEL}`} style={{ transform: "translateZ(-40px) scale(0.96) rotate(-1.2deg)", opacity: 0.45 }} />
           <div aria-hidden className={`absolute inset-x-24 top-20 h-72 ${PANEL}`} style={{ transform: "translateZ(-70px) scale(0.92) rotate(1.6deg)", opacity: 0.35 }} />
 
-          <div className={`relative ${PANEL} ${DEEP} px-12 py-16 text-center`}>
+          <div className={`relative ${PANEL} ${DEEP} px-5 py-12 text-center sm:px-12 sm:py-16`}>
             <p className="text-[11px] font-medium tracking-[0.4em] uppercase text-[#8A8C96]">
               {copy.eyebrow}
             </p>
@@ -75,7 +75,7 @@ export default function SpatialUiDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Testimonial — wide panel */}
-        <section className={`${PANEL} ${NEAR} px-12 py-12 text-center`}>
+        <section className={`${PANEL} ${NEAR} px-6 py-12 text-center sm:px-12`}>
           <p className="mx-auto max-w-2xl text-xl leading-relaxed font-medium text-[#2C2D35]">
             “{copy.testimonial.quote}”
           </p>

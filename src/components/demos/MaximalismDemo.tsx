@@ -59,9 +59,9 @@ export default function MaximalismDemo({ copy }: { copy: Landing }) {
             ✿ {copy.eyebrow} ✿
           </p>
           <h1 className="mt-4 leading-[0.86]">
-            <span className="block text-6xl font-black text-[#7A6FF0] italic">turn messy</span>
-            <span className="-mt-2 block text-7xl font-black text-[#FF3EB5]">ideas into</span>
-            <span className="-mt-3 block text-6xl font-black text-[#1D1145]" style={{ fontFamily: "serif", fontStyle: "italic" }}>
+            <span className="block text-4xl font-black text-[#7A6FF0] italic sm:text-6xl">turn messy</span>
+            <span className="-mt-2 block text-5xl font-black text-[#FF3EB5] sm:text-7xl">ideas into</span>
+            <span className="-mt-3 block text-4xl font-black text-[#1D1145] sm:text-6xl" style={{ fontFamily: "serif", fontStyle: "italic" }}>
               finished designs
             </span>
           </h1>
@@ -148,9 +148,9 @@ export default function MaximalismDemo({ copy }: { copy: Landing }) {
         <p className="text-center text-[11px] font-black uppercase tracking-widest border-y-4 border-dashed border-[#FF3EB5] py-2">{copy.pricingNote} ★ ✦ ✿</p>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between border-t-4 border-[#1D1145] bg-white px-6 py-4 text-xs font-black uppercase">
+        <footer className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t-4 border-[#1D1145] bg-white px-5 py-4 text-xs font-black uppercase sm:px-6">
           <span>{copy.copyright}</span>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             {copy.footerLinks.map((l, i) => (
               <span key={l} className="px-2 py-1 border-2 border-[#1D1145]" style={{ background: ["#F9C74F", "#90E1EF", "#FFC2E3"][i], borderRadius: "0 1rem 0 1rem" }}>
                 {l}

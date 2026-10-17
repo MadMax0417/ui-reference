@@ -17,7 +17,7 @@ export default function Y2KDemo({ copy }: { copy: Landing }) {
           <span className="text-lg font-black italic tracking-tight">lumio<span className="text-[#FF70C2]">✌</span></span>
           <div className="flex items-center gap-4 text-xs font-bold">
             {copy.navLinks.map((l) => (
-              <span key={l} className="hover:text-[#FF70C2]">{l}</span>
+              <span key={l} className="hidden hover:text-[#FF70C2] sm:inline">{l}</span>
             ))}
             <span className={`rounded-full bg-gradient-to-b from-white to-[#BFD8F2] px-5 py-1.5 font-black text-[#23486E] border-2 border-white ${GLOSS}`}>
               START ★
@@ -32,7 +32,7 @@ export default function Y2KDemo({ copy }: { copy: Landing }) {
               ✦ {copy.eyebrow} ✦
             </p>
             <h1
-              className="text-6xl leading-[0.95] font-black italic tracking-tight"
+              className="text-4xl leading-[0.95] font-black italic tracking-tight sm:text-6xl"
               style={{
                 backgroundImage: "linear-gradient(180deg, #FDFEFF 0%, #9BB8D3 45%, #4A6B93 75%, #8FA9C4 100%)",
                 WebkitBackgroundClip: "text",
@@ -146,7 +146,7 @@ export default function Y2KDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Footer */}
-        <footer className={`flex items-center justify-between rounded-full bg-white/70 border-2 border-white px-6 py-3.5 text-xs font-bold ${GLOSS}`}>
+        <footer className={`flex flex-wrap items-center justify-between gap-x-5 gap-y-1 rounded-full bg-white/70 border-2 border-white px-5 py-3.5 text-xs font-bold sm:px-6 ${GLOSS}`}>
           <span>{copy.copyright}</span>
           <div className="flex gap-4 text-[#3D5A7A]">
             {copy.footerLinks.map((l) => (

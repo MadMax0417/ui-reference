@@ -44,7 +44,7 @@ export default function SynthwaveDemo({ copy }: { copy: Landing }) {
           </span>
           <div className="flex items-center gap-6 text-[11px] font-bold tracking-[0.2em] uppercase text-[#B9A9D9]">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l}</span>
+              <span key={l} className="hidden sm:inline">{l}</span>
             ))}
             <span
               className="border px-4 py-1.5 italic text-white"
@@ -61,7 +61,7 @@ export default function SynthwaveDemo({ copy }: { copy: Landing }) {
             [ {copy.eyebrow} — NIGHT DRIVE MODE ]
           </p>
           <h1
-            className="mt-5 max-w-2xl text-5xl leading-[1.02] font-black italic tracking-tight"
+            className="mt-5 max-w-2xl text-4xl leading-[1.02] font-black italic tracking-tight sm:text-5xl"
             style={{
               backgroundImage: "linear-gradient(92deg, #FFFFFF 0%, #FF9CFF 40%, #FF29E5 70%, #00F0FF 100%)",
               WebkitBackgroundClip: "text",
@@ -167,7 +167,7 @@ export default function SynthwaveDemo({ copy }: { copy: Landing }) {
         <p className="text-[10px] tracking-[0.3em] uppercase text-[#B9A9D9]/70">{copy.pricingNote}</p>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between border-t border-dashed border-[#FF29E5]/40 pt-4 text-[10px] font-bold tracking-[0.25em] uppercase text-[#B9A9D9]">
+        <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-1 border-t border-dashed border-[#FF29E5]/40 pt-4 text-[10px] font-bold tracking-[0.25em] uppercase text-[#B9A9D9]">
           <span>{copy.copyright}</span>
           <div className="flex gap-5" style={{ color: NEON_P }}>
             {copy.footerLinks.map((l) => (

@@ -5,30 +5,30 @@ const RULE = "border-t border-black";
 
 export default function SwissDesignDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full bg-white p-8 font-sans text-black">
+    <div className="min-h-full bg-white p-4 font-sans text-black sm:p-8">
       <div className="mx-auto max-w-5xl">
         {/* Nav on grid, flush left */}
-        <nav className={`flex items-center justify-between pb-4 ${RULE}`}>
+        <nav className={`flex flex-wrap items-center justify-between gap-x-6 gap-y-2 pb-4 ${RULE}`}>
           <span className="text-sm font-medium lowercase">lumio<sup className="text-red-600">®</sup></span>
-          <div className="flex gap-8 text-[11px] font-medium uppercase tracking-widest">
+          <div className="flex flex-wrap items-center gap-4 text-[11px] font-medium uppercase tracking-widest sm:gap-8">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l}</span>
+              <span key={l} className="hidden sm:inline">{l}</span>
             ))}
             <span className="text-red-600">{copy.ctaPrimary} →</span>
           </div>
         </nav>
 
         {/* Hero in 12-col grid, flush left */}
-        <section className="grid grid-cols-12 gap-x-8 pt-16 pb-20">
-          <div className="col-span-12 lg:col-span-8">
+        <section className="grid grid-cols-1 gap-6 pt-16 pb-20 lg:grid-cols-12 lg:gap-x-8">
+          <div className="lg:col-span-8">
             <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.3em] text-red-600">
               {copy.eyebrow}
             </p>
-            <h1 className="text-6xl leading-[0.95] font-medium lowercase tracking-tight">
+            <h1 className="text-4xl leading-[0.95] font-medium lowercase tracking-tight sm:text-6xl">
               {copy.heroTitle.toLowerCase()}<span className="text-red-600">.</span>
             </h1>
           </div>
-          <div className="col-span-12 mt-10 flex flex-col gap-4 lg:col-span-4 lg:mt-0">
+          <div className="mt-10 flex flex-col gap-4 lg:col-span-4 lg:col-start-9 lg:mt-0">
             {[
               ["Product", "Canvas · Copilot · Export"],
               ["Format", "One calm workspace"],
@@ -82,14 +82,14 @@ export default function SwissDesignDemo({ copy }: { copy: Landing }) {
             {copy.plans.map((p, i) => (
               <div
                 key={p.name}
-                className={`grid grid-cols-[5rem_1fr_7rem_auto] items-baseline gap-4 border-b border-black py-5`}
+                className={`grid grid-cols-[3rem_1fr_auto] items-baseline gap-4 border-b border-black py-5 sm:grid-cols-[5rem_1fr_7rem_auto]`}
               >
                 <span className="text-xs font-medium uppercase tracking-widest">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="text-lg font-medium lowercase">{p.name.toLowerCase()}{p.popular ? <span className="text-red-600"> — chosen</span> : null}</span>
                 <span className="text-2xl font-medium text-red-600">{p.price}</span>
-                <span className="text-[11px] uppercase tracking-widest">{p.cta}</span>
+                <span className="hidden text-[11px] uppercase tracking-widest sm:inline">{p.cta}</span>
               </div>
             ))}
           </div>
@@ -99,9 +99,9 @@ export default function SwissDesignDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Footer */}
-        <footer className={`mt-20 flex items-center justify-between border-t-2 border-black pt-4 pb-2`}>
+        <footer className={`mt-20 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t-2 border-black pt-4 pb-2`}>
           <span className="text-[11px] font-medium lowercase">{copy.copyright}</span>
-          <div className="flex gap-6 text-[11px] uppercase tracking-widest">
+          <div className="flex flex-wrap gap-4 text-[11px] uppercase tracking-widest sm:gap-6">
             {copy.footerLinks.map((l) => (
               <span key={l}>{l}</span>
             ))}

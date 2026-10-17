@@ -10,12 +10,12 @@ export default function BiophilicDemo({ copy }: { copy: Landing }) {
     <div className="min-h-full p-6 font-sans" style={{ background: SAND, color: "#2F3B2F" }}>
       <div className="mx-auto max-w-5xl space-y-7">
         {/* Nav — soft floating seed */}
-        <nav className={`mx-auto flex w-fit items-center gap-8 rounded-full bg-[#FBFAF2] px-8 py-3.5 shadow-[0_10px_30px_rgba(79,122,82,0.12)]`}>
+        <nav className={`mx-auto flex w-fit items-center gap-6 rounded-full bg-[#FBFAF2] px-5 py-3 shadow-[0_10px_30px_rgba(79,122,82,0.12)] sm:gap-8 sm:px-8 sm:py-3.5`}>
           <span className="flex items-center gap-2 text-sm font-semibold">
             <span className="grid size-8 place-items-center rounded-full bg-[#E4EDD8] text-base">🌱</span>
             {copy.product}
           </span>
-          <div className="flex gap-6 text-xs font-medium text-[#5C685A]">
+          <div className="hidden gap-6 text-xs font-medium text-[#5C685A] sm:flex">
             {copy.navLinks.map((l) => (
               <span key={l}>{l}</span>
             ))}
@@ -34,12 +34,12 @@ export default function BiophilicDemo({ copy }: { copy: Landing }) {
             <p className="text-[11px] font-semibold tracking-[0.35em] uppercase" style={{ color: MOSS }}>
               {copy.eyebrow}
             </p>
-            <h1 className="mt-5 text-5xl leading-[1.1] font-semibold tracking-tight">
+            <h1 className="mt-5 text-4xl leading-[1.1] font-semibold tracking-tight sm:text-5xl">
               {copy.heroTitle}
               <span className="text-[#A3B896]">.</span>
             </h1>
             <p className="mt-6 max-w-md text-sm leading-loose text-[#5C685A]">{copy.heroSubtitle}</p>
-            <div className="mt-9 flex gap-4">
+            <div className="mt-9 flex flex-wrap gap-4">
               <span className="rounded-full px-8 py-4 text-xs font-semibold text-white" style={{ background: MOSS }}>
                 {copy.ctaPrimary} 🍃
               </span>
@@ -85,7 +85,7 @@ export default function BiophilicDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Testimonial */}
-        <section className={`mx-auto max-w-3xl rounded-[2rem_3.5rem_2rem_3.5rem] bg-[#FBFAF2] px-12 py-12 text-center shadow-[0_22px_50px_rgba(79,122,82,0.15)]`}>
+        <section className={`mx-auto max-w-3xl rounded-[2rem_3.5rem_2rem_3.5rem] bg-[#FBFAF2] px-6 py-12 text-center shadow-[0_22px_50px_rgba(79,122,82,0.15)] sm:px-12`}>
           <p className="text-xl leading-relaxed font-medium">“{copy.testimonial.quote}”</p>
           <div className="mt-5 flex items-center justify-center gap-3">
             <span className={`grid size-10 place-items-center rounded-full bg-[#E4EDD8] text-sm`}>🌿</span>
@@ -129,7 +129,7 @@ export default function BiophilicDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between px-4 py-5 text-xs text-[#5C685A]">
+        <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-1 px-4 py-5 text-xs text-[#5C685A]">
           <span>{copy.copyright}</span>
           <div className="flex gap-5">
             {copy.footerLinks.map((l) => (

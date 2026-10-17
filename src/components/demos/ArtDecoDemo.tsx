@@ -9,7 +9,7 @@ export default function ArtDecoDemo({ copy }: { copy: Landing }) {
 
   return (
     <div
-      className="min-h-full p-8 font-sans"
+      className="min-h-full p-4 font-sans sm:p-8"
       style={{
         background: "radial-gradient(ellipse at 50% 0%, #1B1B1F 0%, #0B0B0D 70%)",
         color: "#E7E3D8",
@@ -17,13 +17,13 @@ export default function ArtDecoDemo({ copy }: { copy: Landing }) {
     >
       <div className="mx-auto max-w-5xl space-y-7">
         {/* Nav */}
-        <nav className="flex items-center justify-between border border-[#8A6D2F]/50 bg-[#111114] px-7 py-4">
+        <nav className="flex items-center justify-between border border-[#8A6D2F]/50 bg-[#111114] px-5 py-4 sm:px-7">
           <span className="text-sm font-semibold tracking-[0.45em] uppercase" style={GOLD}>
             {copy.product}
           </span>
-          <div className="flex items-center gap-7 text-[11px] font-medium tracking-[0.3em] text-[#B9B3A2] uppercase">
+          <div className="flex items-center gap-4 text-[11px] font-medium tracking-[0.3em] text-[#B9B3A2] uppercase sm:gap-7">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l}</span>
+              <span key={l} className="hidden sm:inline">{l}</span>
             ))}
             <span
               className="border px-5 py-1.5 tracking-[0.25em]"
@@ -35,7 +35,7 @@ export default function ArtDecoDemo({ copy }: { copy: Landing }) {
         </nav>
 
         {/* Hero */}
-        <section className="relative px-10 py-20 text-center">
+        <section className="relative px-6 py-16 text-center sm:px-10 sm:py-20">
           {/* Deco sunburst + frame */}
           <div
             aria-hidden
@@ -60,7 +60,7 @@ export default function ArtDecoDemo({ copy }: { copy: Landing }) {
             <p className="mt-5 text-[11px] font-medium tracking-[0.55em] uppercase" style={GOLD}>
               {copy.eyebrow}
             </p>
-            <h1 className="mx-auto mt-4 max-w-2xl text-5xl leading-[1.12] font-semibold tracking-[0.08em] uppercase">
+            <h1 className="mx-auto mt-4 max-w-2xl text-4xl leading-[1.12] font-semibold tracking-[0.08em] uppercase sm:text-5xl">
               {copy.heroTitle}
             </h1>
             <div aria-hidden className="mx-auto mt-6 flex w-72 items-center gap-2">
@@ -71,7 +71,7 @@ export default function ArtDecoDemo({ copy }: { copy: Landing }) {
             <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-[#B9B3A2]">
               {copy.heroSubtitle}
             </p>
-            <div className="mt-9 flex justify-center gap-4">
+            <div className="mt-9 flex flex-wrap justify-center gap-4">
               <span
                 className="px-9 py-3.5 text-[11px] font-semibold tracking-[0.3em] uppercase"
                 style={{
@@ -112,7 +112,7 @@ export default function ArtDecoDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Testimonial */}
-        <section className={`${frame} px-12 py-14 text-center`}>
+        <section className={`${frame} px-6 py-14 text-center sm:px-12`}>
           <div aria-hidden className="mx-auto mb-6 flex w-56 items-center gap-2">
             <span className="h-px flex-1 bg-[#D8B24A]/60" />
             <span className="size-2 rotate-45 border border-[#D8B24A]" />

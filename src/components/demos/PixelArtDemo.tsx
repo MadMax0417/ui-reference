@@ -57,7 +57,7 @@ export default function PixelArtDemo({ copy }: { copy: Landing }) {
         </div>
 
         {/* Nav */}
-        <nav className="grid grid-cols-6 text-[11px] font-bold uppercase tracking-wider">
+        <nav className="grid grid-cols-2 text-[11px] font-bold uppercase tracking-wider sm:grid-cols-6">
           {[
             { label: copy.product, wide: true },
             ...copy.navLinks.map((l) => ({ label: l, wide: false })),
@@ -65,7 +65,7 @@ export default function PixelArtDemo({ copy }: { copy: Landing }) {
           ].map((item, i) => (
             <span
               key={i}
-              className={`px-4 py-3 text-center ${i === 0 || item.wide ? "col-span-2" : "col-span-1"}`}
+              className={`px-2 py-3 text-center sm:px-4 ${i === 0 || item.wide ? "col-span-2" : "col-span-1"}`}
               style={{
                 ...EDGE,
                 marginLeft: -2,
@@ -174,7 +174,7 @@ export default function PixelArtDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between px-2 pb-2 text-[10px] uppercase tracking-widest text-[#B9B9C2]">
+        <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-2 px-2 pb-2 text-[10px] uppercase tracking-widest text-[#B9B9C2]">
           <span>{copy.copyright}</span>
           <div className="flex gap-5 text-[#58C24F]">
             {copy.footerLinks.map((l) => (

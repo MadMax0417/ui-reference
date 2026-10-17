@@ -29,7 +29,7 @@ export default function GlassmorphismDemo({ copy }: { copy: Landing }) {
           <span className="text-sm font-bold tracking-tight">{copy.product}</span>
           <div className="flex items-center gap-6 text-xs font-medium text-white/80">
             {copy.navLinks.map((l) => (
-              <span key={l} className="hover:text-white">
+              <span key={l} className="hidden hover:text-white sm:inline">
                 {l}
               </span>
             ))}
@@ -44,13 +44,13 @@ export default function GlassmorphismDemo({ copy }: { copy: Landing }) {
           <p className={`mx-auto w-fit rounded-full px-4 py-1.5 text-[11px] font-semibold tracking-widest uppercase ${GLASS}`}>
             {copy.eyebrow}
           </p>
-          <h1 className="mx-auto mt-6 max-w-2xl text-5xl leading-[1.1] font-bold">
+          <h1 className="mx-auto mt-6 max-w-2xl text-4xl leading-[1.1] font-bold sm:text-5xl">
             {copy.heroTitle}
           </h1>
           <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-white/75">
             {copy.heroSubtitle}
           </p>
-          <div className="mt-9 flex justify-center gap-4">
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
             <span className="rounded-full bg-white px-7 py-3 text-xs font-bold text-[#3B0764] shadow-lg shadow-black/20">
               {copy.ctaPrimary}
             </span>
@@ -77,7 +77,7 @@ export default function GlassmorphismDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Testimonial */}
-        <section className={`mt-6 rounded-3xl px-10 py-14 text-center shadow-xl shadow-black/10 ${GLASS}`}>
+        <section className={`mt-6 rounded-3xl px-5 py-14 text-center shadow-xl shadow-black/10 sm:px-10 ${GLASS}`}>
           <p className="mx-auto max-w-2xl text-xl leading-relaxed font-medium">
             “{copy.testimonial.quote}”
           </p>
@@ -117,7 +117,7 @@ export default function GlassmorphismDemo({ copy }: { copy: Landing }) {
         <p className="mt-6 mb-4 text-center text-[11px] text-white/60">{copy.pricingNote}</p>
 
         {/* Footer */}
-        <footer className={`flex items-center justify-between rounded-2xl px-6 py-4 text-xs text-white/70 ${GLASS}`}>
+        <footer className={`flex flex-wrap items-center justify-between gap-x-5 gap-y-2 rounded-2xl px-5 py-4 text-xs text-white/70 sm:px-6 ${GLASS}`}>
           <span>{copy.copyright}</span>
           <div className="flex gap-5">
             {copy.footerLinks.map((l) => (

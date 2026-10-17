@@ -61,9 +61,9 @@ export default function VaporwaveDemo({ copy }: { copy: Landing }) {
           >
             {copy.product}
           </span>
-          <div className="flex items-center gap-5 text-[11px] font-bold tracking-[0.2em] text-fuchsia-100/80 uppercase">
+          <div className="flex items-center gap-4 text-[11px] font-bold tracking-[0.2em] text-fuchsia-100/80 uppercase sm:gap-5">
             {copy.navLinks.map((l) => (
-              <span key={l}>{l}</span>
+              <span key={l} className="hidden sm:inline">{l}</span>
             ))}
             <span className="rounded border border-cyan-300/70 bg-cyan-300/10 px-4 py-1.5 text-cyan-200 shadow-[0_0_14px_rgba(121,240,255,0.35)]">
               Start free
@@ -80,7 +80,7 @@ export default function VaporwaveDemo({ copy }: { copy: Landing }) {
             {copy.eyebrow}
           </p>
           <h1
-            className="mt-4 text-5xl font-black tracking-tight sm:text-6xl"
+            className="mt-4 text-4xl font-black tracking-tight sm:text-6xl"
             style={{
               backgroundImage: "linear-gradient(180deg, #FFF6BF 0%, #FF9AE0 55%, #8B5CF6 100%)",
               WebkitBackgroundClip: "text",
@@ -94,7 +94,7 @@ export default function VaporwaveDemo({ copy }: { copy: Landing }) {
           <p className="mx-auto mt-4 max-w-md text-sm font-medium leading-relaxed text-fuchsia-50/85">
             {copy.heroSubtitle}
           </p>
-          <div className="mt-8 flex justify-center gap-4">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             <span
               className="px-8 py-3.5 text-xs font-black tracking-widest text-white uppercase"
               style={{
@@ -129,7 +129,7 @@ export default function VaporwaveDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Testimonial */}
-        <section className="border border-fuchsia-300/35 bg-[#2A0A45]/55 px-10 py-10 text-center backdrop-blur-md">
+        <section className="border border-fuchsia-300/35 bg-[#2A0A45]/55 px-5 py-10 text-center backdrop-blur-md sm:px-10">
           <p
             className="text-xl font-semibold text-white"
             style={{ textShadow: "0 0 18px rgba(255,110,220,0.6)" }}
@@ -189,7 +189,7 @@ export default function VaporwaveDemo({ copy }: { copy: Landing }) {
         </p>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between border-t border-fuchsia-300/35 px-2 py-5 text-[11px] font-bold tracking-widest text-fuchsia-100/70 uppercase">
+        <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-1 border-t border-fuchsia-300/35 px-2 py-5 text-[11px] font-bold tracking-widest text-fuchsia-100/70 uppercase">
           <span>{copy.copyright}</span>
           <div className="flex gap-5 text-cyan-200/80">
             {copy.footerLinks.map((l) => (

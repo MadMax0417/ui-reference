@@ -26,7 +26,7 @@ function Arrow({ className }: { className?: string }) {
 export default function HandDrawnDemo({ copy }: { copy: Landing }) {
   return (
     <div
-      className="min-h-full p-8 font-sans text-[#2F2B27]"
+      className="min-h-full p-4 font-sans text-[#2F2B27] sm:p-8"
       style={{
         background:
           "repeating-linear-gradient(0deg, #FFFDF4 0 31px, rgba(59,90,120,0.08) 31px 32px), #FFFDF4",
@@ -60,7 +60,7 @@ export default function HandDrawnDemo({ copy }: { copy: Landing }) {
           <p className="inline-block -rotate-2 px-2 text-[12px] font-black tracking-widest uppercase" style={{ background: "#FFD93D" }}>
             {copy.eyebrow} — sketch № 12
           </p>
-          <h1 className="mx-auto mt-6 max-w-2xl text-5xl leading-[1.06] font-black tracking-tight">
+          <h1 className="mx-auto mt-6 max-w-2xl text-4xl leading-[1.06] font-black tracking-tight sm:text-5xl">
             turn messy ideas into{" "}
             <span className="inline-block -rotate-1 bg-white/80 px-3 [text-decoration:underline]" style={{ ...BORDER, ...WOB2, textDecorationThickness: 3 }}>
               finished
@@ -70,7 +70,7 @@ export default function HandDrawnDemo({ copy }: { copy: Landing }) {
           <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed font-semibold text-[#57514A]">
             {copy.heroSubtitle}
           </p>
-          <div className="mt-9 flex justify-center gap-5">
+          <div className="mt-9 flex flex-wrap justify-center gap-5">
             <span className="px-8 py-3.5 text-xs font-black italic" style={{ ...BORDER, ...WOB1, background: "#B5E5C8", boxShadow: "4px 4px 0 rgba(47,43,39,0.25)" }}>
               {copy.ctaPrimary} ✌
             </span>

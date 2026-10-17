@@ -18,7 +18,7 @@ function Tape({ className, color = "#E9DAB4" }: { className?: string; color?: st
 
 export default function CollageDemo({ copy }: { copy: Landing }) {
   return (
-    <div className="min-h-full overflow-hidden p-8" style={{ background: "#EFE3D3", fontFamily: "ui-sans-serif" }}>
+    <div className="min-h-full overflow-hidden p-4 sm:p-8" style={{ background: "#EFE3D3", fontFamily: "ui-sans-serif" }}>
       <div className="relative mx-auto max-w-5xl">
         {/* Photo scraps floating */}
         <div aria-hidden className="absolute -top-6 right-10 h-24 w-40 rotate-6" style={{ background: "linear-gradient(120deg,#94B7C6,#5E7E90)", clipPath: TORN_B, opacity: 0.8 }} />
@@ -32,7 +32,7 @@ export default function CollageDemo({ copy }: { copy: Landing }) {
             </span>
             <Tape className="-top-3 left-6 -rotate-3" />
           </div>
-          <div className="relative flex gap-2">
+          <div className="relative flex flex-wrap justify-end gap-2">
             {copy.navLinks.map((l, i) => (
               <span
                 key={l}
@@ -55,15 +55,15 @@ export default function CollageDemo({ copy }: { copy: Landing }) {
         <section className="relative mt-14 grid gap-10 py-8 md:grid-cols-2">
           <div className="relative">
             <h1 className="relative leading-[1.02]">
-              <span className="relative inline-block bg-white px-5 py-3 text-5xl font-bold shadow-lg rotate-[-1.5deg]" style={{ clipPath: TORN_A, fontFamily: "ui-serif, Georgia" }}>
+              <span className="relative inline-block bg-white px-5 py-3 text-3xl font-bold shadow-lg rotate-[-1.5deg] sm:text-5xl" style={{ clipPath: TORN_A, fontFamily: "ui-serif, Georgia" }}>
                 turn messy
               </span>
               <br />
-              <span className="relative inline-block -mt-2 bg-[#B06B4A] px-5 py-3 text-5xl font-bold text-[#FBF7EE] shadow-lg rotate-[1.2deg]" style={{ clipPath: TORN_B, fontFamily: "ui-monospace" }}>
+              <span className="relative inline-block -mt-2 bg-[#B06B4A] px-5 py-3 text-3xl font-bold text-[#FBF7EE] shadow-lg rotate-[1.2deg] sm:text-5xl" style={{ clipPath: TORN_B, fontFamily: "ui-monospace" }}>
                 ideas into
               </span>
               <br />
-              <span className="relative inline-block -mt-2 bg-white px-5 py-3 text-5xl font-bold shadow-lg rotate-[-1deg]" style={{ clipPath: TORN_C, fontFamily: "ui-serif, Georgia" }}>
+              <span className="relative inline-block -mt-2 bg-white px-5 py-3 text-3xl font-bold shadow-lg rotate-[-1deg] sm:text-5xl" style={{ clipPath: TORN_C, fontFamily: "ui-serif, Georgia" }}>
                 finished designs
               </span>
             </h1>
@@ -71,7 +71,7 @@ export default function CollageDemo({ copy }: { copy: Landing }) {
               <Tape className="-top-3.5 left-10 rotate-2" />
               <p className="text-sm leading-relaxed text-[#4A3F35]">{copy.heroSubtitle}</p>
             </div>
-            <div className="mt-8 flex gap-5">
+            <div className="mt-8 flex flex-wrap gap-5">
               <span className="relative bg-[#1E1B16] px-7 py-3.5 text-xs font-bold text-[#FBF7EE] shadow-md rotate-[-1deg]" style={{ clipPath: TORN_C }}>
                 {copy.ctaPrimary} ✂
               </span>

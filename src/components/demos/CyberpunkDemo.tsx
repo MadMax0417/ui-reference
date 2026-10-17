@@ -30,7 +30,7 @@ export default function CyberpunkDemo({ copy }: { copy: Landing }) {
           </span>
           <div className="flex items-center gap-5 text-[11px] tracking-widest text-cyan-100/70 uppercase">
             {copy.navLinks.map((l) => (
-              <span key={l} className="hover:text-cyan-300">
+              <span key={l} className="hidden hover:text-cyan-300 sm:inline">
                 {l}
               </span>
             ))}
@@ -45,7 +45,7 @@ export default function CyberpunkDemo({ copy }: { copy: Landing }) {
 
         {/* Hero */}
         <section
-          className="border border-cyan-400/40 bg-[#0A0F14]/80 px-8 py-16 text-center backdrop-blur"
+          className="border border-cyan-400/40 bg-[#0A0F14]/80 px-5 py-12 text-center backdrop-blur sm:px-8 sm:py-16"
           style={clip}
         >
           <p className="text-[11px] tracking-[0.4em] text-fuchsia-300 uppercase">
@@ -60,7 +60,7 @@ export default function CyberpunkDemo({ copy }: { copy: Landing }) {
           <p className="mx-auto mt-4 max-w-md text-xs leading-relaxed text-cyan-100/60">
             {copy.heroSubtitle}
           </p>
-          <div className="mt-9 flex justify-center gap-4">
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
             <span
               className="border border-cyan-300 bg-cyan-400/10 px-8 py-3.5 text-xs font-bold tracking-widest text-cyan-200 uppercase"
               style={{ ...clip, boxShadow: "0 0 24px rgba(34,211,238,0.35), inset 0 0 18px rgba(34,211,238,0.12)" }}

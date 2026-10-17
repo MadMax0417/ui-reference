@@ -15,7 +15,7 @@ export default function ClaymorphismDemo({ copy }: { copy: Landing }) {
           <span className="text-sm font-extrabold text-[#4F46E5]">{copy.product}</span>
           <div className="flex items-center gap-2 text-xs font-bold text-[#5B5BD6]">
             {copy.navLinks.map((l) => (
-              <span key={l} className="rounded-full bg-white px-4 py-2 shadow-sm">
+              <span key={l} className="hidden rounded-full bg-white px-4 py-2 shadow-sm sm:inline-block">
                 {l}
               </span>
             ))}
@@ -26,7 +26,7 @@ export default function ClaymorphismDemo({ copy }: { copy: Landing }) {
         </nav>
 
         {/* Hero */}
-        <section className="rounded-[2.5rem] px-10 py-16 text-center" style={CLAY}>
+        <section className="rounded-[2.5rem] px-5 py-12 text-center sm:px-10 sm:py-16" style={CLAY}>
           <div className="mx-auto grid size-24 place-items-center rounded-[2rem] bg-gradient-to-br from-[#818CF8] to-[#6366F1] text-4xl text-white shadow-[0_20px_35px_-10px_rgba(99,102,241,0.6),inset_0_4px_10px_rgba(255,255,255,0.45)]">
             🫧
           </div>
@@ -39,7 +39,7 @@ export default function ClaymorphismDemo({ copy }: { copy: Landing }) {
           <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed font-medium text-[#64748B]">
             {copy.heroSubtitle}
           </p>
-          <div className="mt-9 flex justify-center gap-4">
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
             <span className="rounded-full bg-gradient-to-b from-[#6366F1] to-[#4F46E5] px-8 py-4 text-xs font-extrabold text-white shadow-[0_16px_30px_-8px_rgba(79,70,229,0.65),inset_0_3px_8px_rgba(255,255,255,0.4)]">
               {copy.ctaPrimary} ✦
             </span>
@@ -110,7 +110,7 @@ export default function ClaymorphismDemo({ copy }: { copy: Landing }) {
         <p className="text-center text-[11px] font-bold text-[#818CF8]">{copy.pricingNote}</p>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between rounded-[2rem] bg-white/80 px-7 py-5 text-xs font-bold text-[#64748B] shadow-[0_14px_28px_-12px_rgba(99,102,241,0.3)]">
+        <footer className="flex flex-wrap items-center justify-between gap-x-5 gap-y-2 rounded-[2rem] bg-white/80 px-5 py-5 text-xs font-bold text-[#64748B] shadow-[0_14px_28px_-12px_rgba(99,102,241,0.3)] sm:px-7">
           <span>{copy.copyright}</span>
           <div className="flex gap-5 text-[#4F46E5]">
             {copy.footerLinks.map((l) => (

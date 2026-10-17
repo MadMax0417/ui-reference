@@ -39,7 +39,7 @@ export default function MinimalismDemo({ copy }: { copy: Landing }) {
         <span className="text-sm font-semibold tracking-tight">{copy.product}</span>
         <div className="flex items-center gap-8 text-xs font-medium tracking-wide text-neutral-500">
           {copy.navLinks.map((l) => (
-            <a key={l} href="#" onClick={(e) => e.preventDefault()} className="hover:text-black">
+            <a key={l} href="#" onClick={(e) => e.preventDefault()} className="hidden hover:text-black sm:inline">
               {l}
             </a>
           ))}
@@ -50,11 +50,11 @@ export default function MinimalismDemo({ copy }: { copy: Landing }) {
       </nav>
 
       {/* Hero */}
-      <section className="px-8 py-40 text-center">
+      <section className="px-6 py-24 text-center sm:px-8 sm:py-40">
         <p className="mb-5 text-[11px] font-medium tracking-[0.3em] text-neutral-400 uppercase">
           {copy.eyebrow}
         </p>
-        <h1 className="mx-auto max-w-2xl text-5xl leading-[1.08] font-extralight tracking-tight">
+        <h1 className="mx-auto max-w-2xl text-4xl leading-[1.08] font-extralight tracking-tight sm:text-5xl">
           {copy.heroTitle}.
         </h1>
         <p className="mx-auto mt-6 max-w-md text-base leading-relaxed font-light text-neutral-500">

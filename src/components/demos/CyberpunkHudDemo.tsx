@@ -77,7 +77,7 @@ export default function CyberpunkHudDemo({ copy }: { copy: Landing }) {
             <span className="font-bold" style={{ color: HUD }}>{copy.product}_HUD</span>
             <div className="flex items-center gap-5 text-[#9DEBC4]/80">
               {copy.navLinks.map((l, i) => (
-                <span key={l}>
+                <span key={l} className="hidden sm:inline">
                   F{i + 1}·{l}
                 </span>
               ))}
@@ -190,7 +190,7 @@ export default function CyberpunkHudDemo({ copy }: { copy: Landing }) {
         <p className="text-center text-[9px] tracking-[0.3em] uppercase text-[#9DEBC4]/50">{copy.pricingNote}</p>
 
         {/* Footer */}
-        <footer className="flex items-center justify-between border border-[#3CFF8F]/20 bg-[#0A1410]/85 px-4 py-3 text-[9px] tracking-[0.25em] uppercase text-[#9DEBC4]/60 text-center" style={clip}>
+        <footer className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border border-[#3CFF8F]/20 bg-[#0A1410]/85 px-4 py-3 text-[9px] tracking-[0.25em] uppercase text-[#9DEBC4]/60 text-center" style={clip}>
           <span className="flex items-center gap-2">
             <span className="size-1.5 animate-pulse" style={{ background: HUD }} /> LINK STABLE
           </span>

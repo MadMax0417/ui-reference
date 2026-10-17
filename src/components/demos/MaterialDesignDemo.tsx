@@ -19,7 +19,7 @@ export default function MaterialDesignDemo({ copy }: { copy: Landing }) {
         </div>
         <div className="flex items-center gap-7 text-xs font-medium">
           {copy.navLinks.map((l) => (
-            <span key={l} className="opacity-90">{l}</span>
+            <span key={l} className="hidden opacity-90 sm:inline">{l}</span>
           ))}
           <span className="grid size-8 place-items-center rounded-full bg-white/20 text-base">🔮</span>
         </div>
@@ -33,7 +33,7 @@ export default function MaterialDesignDemo({ copy }: { copy: Landing }) {
           style={{ background: "linear-gradient(120deg, #6200EE 0%, #3700B3 100%)" }}
         />
         <div className="mx-auto -mt-24 max-w-4xl px-6">
-          <div className={`rounded-xl bg-white p-10 text-center ${ELEV2}`}>
+          <div className={`rounded-xl bg-white p-6 text-center sm:p-10 ${ELEV2}`}>
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#6200EE]">
               {copy.eyebrow}
             </p>

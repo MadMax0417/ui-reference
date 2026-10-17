@@ -33,7 +33,7 @@ export default function MemphisDemo({ copy }: { copy: Landing }) {
             {copy.navLinks.map((l, i) => (
               <span
                 key={l}
-                className="rounded-full border-2 border-[#27233A] px-4 py-1.5"
+                className="hidden rounded-full border-2 border-[#27233A] px-4 py-1.5 sm:inline-block"
                 style={{ background: ["#F9C74F", "#90E1EF", "#F6D6FD"][i % 3] }}
               >
                 {l}
@@ -47,14 +47,14 @@ export default function MemphisDemo({ copy }: { copy: Landing }) {
 
         {/* Hero */}
         <section className="mt-6 grid gap-6 lg:grid-cols-5">
-          <div className="relative rounded-3xl border-4 border-[#27233A] bg-[#90E1EF] p-10 shadow-[10px_10px_0_0_#27233A] lg:col-span-3">
+          <div className="relative rounded-3xl border-4 border-[#27233A] bg-[#90E1EF] p-6 shadow-[10px_10px_0_0_#27233A] sm:p-10 lg:col-span-3">
             <span className="absolute -top-5 -right-4 grid size-14 rotate-12 place-items-center rounded-2xl border-4 border-[#27233A] bg-[#F9C74F] text-2xl">
               ★
             </span>
             <p className="inline-block -rotate-2 rounded-lg border-2 border-[#27233A] bg-[#F6D6FD] px-3 py-1 text-[11px] font-black uppercase tracking-widest">
               {copy.eyebrow}
             </p>
-            <h1 className="mt-5 text-5xl leading-[0.98] font-black tracking-tight">
+            <h1 className="mt-5 text-4xl leading-[0.98] font-black tracking-tight sm:text-5xl">
               {copy.heroTitle}
             </h1>
             <p className="mt-5 max-w-md text-sm font-bold leading-relaxed">{copy.heroSubtitle}</p>
@@ -146,7 +146,7 @@ export default function MemphisDemo({ copy }: { copy: Landing }) {
         </section>
 
         {/* Footer */}
-        <footer className="mt-6 flex items-center justify-between rounded-2xl border-4 border-[#27233A] bg-white px-6 py-5 text-xs font-black uppercase shadow-[8px_8px_0_0_#27233A]">
+        <footer className="mt-6 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 rounded-2xl border-4 border-[#27233A] bg-white px-5 py-5 text-xs font-black uppercase shadow-[8px_8px_0_0_#27233A] sm:px-6">
           <span>{copy.copyright}</span>
           <div className="flex gap-5 text-[#FF6B6B]">
             {copy.footerLinks.map((l) => (
